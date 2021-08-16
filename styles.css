@@ -1,0 +1,250 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7CD75;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+}
+
+.table-left {
+    width: 35%;
+    height: 500px;
+    padding: 35px;
+    background-color: #F2F2F2;
+    overflow: auto;
+}
+
+.table-left__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-left__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 26px;
+    color: #000;
+}
+
+.table-left__btn {
+    border: none;
+    background-color: transparent;
+}
+
+.card:checked + .card-area {
+    border-color: blue;
+}
+
+.card-area {
+    display: inline-block;
+    width: 350px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fff;
+    border: solid 3px #DEDEDE;
+    border-radius: 8px;
+}
+
+
+.card-area:hover {
+    border-color: blue;
+    transition: border-color 0.5s ease;
+}
+
+.card-logo {
+    margin-bottom: 20px;
+}
+
+.card-id {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card-data {
+    display: block;
+    font-size: 20px;
+}
+
+.table-right {
+    width: 65%;
+    height: 500px;
+    background-color: #fff;
+    padding: 30px;
+    overflow: auto;
+}
+
+.table-right__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    box-shadow: 0 1px 0 0 #DEDEDE;
+}
+
+.table-right__heading {
+    margin: 0;
+}
+
+.balance {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.price-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+    list-style-type: none;
+}
+
+.price-item + .price-item {
+    margin-top: 40px;
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+}
+
+.price-add {
+    width: 40px;
+    height: 40px;
+    border: solid 1px #BFBFBF;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.price-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-name {
+    margin-left: 60px;
+}
+
+.price-name__heading {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.price-name__about {
+    color: #BFBFBF;
+}
+
+.price-name__id {
+    color: #BFBFBF;
+}
+
+.price-name__data {
+    color: #BFBFBF;
+}
+
+.price {
+    margin-left: 318px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #8797C6;
+}
+
+.price-item:nth-child(2) .price {
+    color: #8ACE5E;
+}
+
+
+@media only screen and (max-width: 1212px) {
+    .table {
+        flex-direction: column;
+    }
+    
+    .table-left {
+        width: 100%;
+        max-height: 325px;
+        overflow-x: auto;
+        flex-direction: column;
+    }
+    
+    
+    .card-list {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .card-area {
+        margin-bottom: 0;
+    }
+    
+    .card-area {
+        margin-right: 25px;
+    }
+    
+    .table-right {
+        width: 100%;
+        max-height: 240px;
+        overflow-x: auto;
+    }
+    
+    .price-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .price-item {
+        margin: 0;
+        flex-direction: row;
+    }
+    
+    .price-item + .price-item {
+        margin: 0;
+        margin-left: 40px;
+    }
+    
+    .price-area {
+        display: block;
+        width: 250px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .price {
+        margin: 0;
+        margin-left: 20px;
+    }
+    
+    .price-name {
+        margin-left: 20px;
+    }
+}
